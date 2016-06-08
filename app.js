@@ -4,7 +4,7 @@ $(document).ready(function() {
     var coordinates = position.coords;
     var longitude = coordinates.longitude;
     var latittude = coordinates.latitude;
-    var url = "api.openweathermap.org/data/2.5/forecast/weather?lat=" + latittude + "&lon=" + longitude + "&APPID=038243b3b5b7501af0c45899e32c9e66";
+    var url = "http://api.openweathermap.org/data/2.5/forecast/weather?lat=" + latittude + "&lon=" + longitude + "&APPID=038243b3b5b7501af0c45899e32c9e66";
     var data;
     var callback = function(response) {
       console.log(response.weather);
