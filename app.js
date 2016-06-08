@@ -9,7 +9,8 @@ $(document).ready(function() {
     var callback = function(response) {
      // console.log(response.list[0].weather);
       //console.log(response.list[0].main.temp);
-      $("#Weatherinfo").append("<h1>Today's temp is: "+response.list[0].main.temp+"</h1>");
+      var Fartemp=(response.list[0].main.temp-273.15)*1.8+32;
+      $("#Weatherinfo").append("<h1>Today's temp is: "+Fartemp+"</h1>");
     };
 
     $.getJSON(url, callback);
