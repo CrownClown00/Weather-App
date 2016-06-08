@@ -8,7 +8,8 @@ $(document).ready(function() {
     var data;
     var callback = function(response) {
      // console.log(response.list[0].weather);
-      console.log(response.list[0].main.temp);
+      //console.log(response.list[0].main.temp);
+      $("#Weatherinfo").append("<h1>Today's temp is: "+response.list[0].main.temp+"</h1>");
     };
 
     $.getJSON(url, callback);
