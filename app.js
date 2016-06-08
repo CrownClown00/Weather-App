@@ -8,7 +8,7 @@ $(document).ready(function() {
     var data;
     var callback = function(response) {
      // console.log(response.list[0].weather);
-      console.log(response);
+      console.log(response.list[0].main.temp);
     };
 
     $.getJSON(url, callback);
