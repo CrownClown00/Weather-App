@@ -12,7 +12,9 @@ $(document).ready(function() {
       console.log(response.list[0].main.temp);
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
+      var cond =response.cod;
       $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
+      $("id").addClass("owf owf-"+cond);
     };
 
     $.getJSON(url, callback);
