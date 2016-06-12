@@ -9,10 +9,12 @@ $(document).ready(function() {
     var callback = function(response) {
      console.log(response);
      console.log(response.list[0].weather.description);
-      console.log(response.list[0].main.temp);
+      //console.log(response.list[0].main.temp);
+      
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
+      console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
       $("id").addClass("owf owf-"+cond);
     };
