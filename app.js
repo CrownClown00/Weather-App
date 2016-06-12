@@ -16,7 +16,7 @@ $(document).ready(function() {
       var cond =response.cod;
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
-      $("id").addClass("owf owf-"+cond);
+      $("id").addClass("owf owf-"+cond+" owf-5x");
     };
 
     $.getJSON(url, callback);
