@@ -10,7 +10,7 @@ $(document).ready(function() {
      console.log(response);
      console.log(response.list[0].weather.description);
       console.log(response.list[0].main.temp);
-      var weatherDes=response.list[0].weather.description;
+      var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
     };
