@@ -8,10 +8,11 @@ $(document).ready(function() {
     var data;
     var callback = function(response) {
      console.log(response);
-     console.log(response.list[0].weather);
+     console.log(response.list[0].weather.description);
       console.log(response.list[0].main.temp);
+      var weatherDes=response.list[0].weather.description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
-      $("#Weatherinfo").append("<h1>Today's temp is: "+Fartemp+"</h1>");
+      $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
     };
 
     $.getJSON(url, callback);
