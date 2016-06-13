@@ -15,9 +15,30 @@ $(document).ready(function() {
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
       console.log("owf owf-"+cond);
-      $("#Weatherinfo").append("<h1>Todays's Weather: "+weatherDes+"</h1>");
+      $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
-      $("#temperature").append("<h1>Todays's Weather: "+Fartemp+"</h1>");
+     
+     $("#tempChange").click(function(){
+              /*("#temperature").toggle(function(){
+
+                $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
+                $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
+              });*/
+            var Fartempdisplay=$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+            var Celtempdisplay =$("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
+            if(Fartempdisplay){
+              Fartempdisplay.hide()
+              Celtempdisplay.show();
+
+
+            }else{
+              Celtempdisplay.hide();
+              Fartempdisplay.show()
+            }
+
+     })
+      //$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+
     };
 
     $.getJSON(url, callback);
