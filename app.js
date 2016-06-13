@@ -34,7 +34,7 @@ $(document).ready(function() {
 
             }else if(Fartempdisplay=false){
               $("#temperature").empty();
-              Fartempdisplay=$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+              $("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
             }
 
      })
