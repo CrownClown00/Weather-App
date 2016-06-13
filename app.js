@@ -19,7 +19,7 @@ $(document).ready(function() {
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
-     $("#temperature").addClass("Celtemperature"); 
+     $("#Weatherinfo").addClass("Celtemperature"); 
      $("#tempChange").click(function(){
         $("#temperature").toggleClass("Fartemperature Celtemperature"); 
          
