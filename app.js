@@ -10,8 +10,8 @@ $(document).ready(function() {
      console.log(response);
      console.log(response.list[0].weather.description);
       //console.log(response.list[0].main.temp);
-      var farClass= $(".temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
-      var celClass= $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
+      $(".temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+       $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
@@ -21,7 +21,7 @@ $(document).ready(function() {
      
      $("#tempChange").click(function(){
               $("#temperature").empty();
-             $("#temperature").toggleClass(farClass,celClass);
+             $("#temperature").toggleClass(".temperature .Celtemperature");
 
      })
       //$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
