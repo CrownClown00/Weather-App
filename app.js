@@ -32,7 +32,7 @@ $(document).ready(function() {
               Celtempdisplay=$("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
 
 
-            }else{
+            }else if(Celtempdisplay=true){
               $("#temperature").empty();
               Fartempdisplay=$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
             }
