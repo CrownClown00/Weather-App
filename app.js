@@ -10,17 +10,18 @@ $(document).ready(function() {
      console.log(response);
      console.log(response.list[0].weather.description);
       //console.log(response.list[0].main.temp);
-      $(".temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
-       $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
+     
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
+      $(".temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+       $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
      
      $("#tempChange").click(function(){
-              $("#temperature").empty();
+              
              $("#temperature").toggleClass(".temperature .Celtemperature");
 
      })
