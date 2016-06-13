@@ -22,8 +22,8 @@ $(document).ready(function() {
      
      $("#tempChange").click(function(){
               
-         //$("#temperature").addClass("Celtemperature"); 
-         alert("hi");
+         $("#temperature").removeClass("Fartemperature"); 
+         //alert("hi");
 
      })
       //$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
