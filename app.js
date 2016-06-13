@@ -20,7 +20,7 @@ $(document).ready(function() {
       $("i").addClass("owf owf-"+cond+" owf-5x");
     
      $("#tempChange").click(function(){
-       
+        $("#temperature").empty();
         $("#temperature").toggleClass("Fartemperature Celtemperature"); 
         $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
        $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
