@@ -25,16 +25,17 @@ $(document).ready(function() {
                 $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
               });*/
             var Fartempdisplay=true;
-            //var Celtempdisplay="";
+            var Celtempdisplay;
             //Fartempdisplay.show()
             if(Fartempdisplay){
               $("#temperature").empty();
               $("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
-              Fartempdisplay=false;
+              Celtempdisplay=true;
 
-            }else if(Fartempdisplay==false){
+            }else if(Celtempdisplay==true){
               $("#temperature").empty();
               $("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+              Celtempdisplay=false;
             }
 
      })
