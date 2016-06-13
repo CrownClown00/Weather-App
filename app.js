@@ -28,12 +28,12 @@ $(document).ready(function() {
             var Celtempdisplay =$("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
             Fartempdisplay.show()
             if(Fartempdisplay.show()=true){
-              Fartempdisplay.hide()
+              $("#temperature").empty();
               Celtempdisplay.show();
 
 
             }else{
-              Celtempdisplay.hide();
+              $("#temperature").empty();
               Fartempdisplay.show()
             }
 
