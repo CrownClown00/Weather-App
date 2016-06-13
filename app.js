@@ -24,9 +24,9 @@ $(document).ready(function() {
                 $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
                 $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
               });*/
-            var Fartempdisplay;
+            var Fartempdisplay=$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");;
             var Celtempdisplay;
-            //Fartempdisplay.show()
+            Fartempdisplay.show()
             if(Fartempdisplay=true){
               $("#temperature").empty();
               Celtempdisplay=$("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
