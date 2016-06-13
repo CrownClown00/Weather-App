@@ -22,7 +22,8 @@ $(document).ready(function() {
      
      $("#tempChange").click(function(){
               
-         $("#temperature").removeClass("Fartemperature"); 
+         //$("#temperature").removeClass("Fartemperature"); 
+         document.getElementById("temperature").className = "";
          //alert("hi");
 
      })
