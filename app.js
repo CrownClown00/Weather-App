@@ -10,7 +10,8 @@ $(document).ready(function() {
      console.log(response);
      console.log(response.list[0].weather.description);
       //console.log(response.list[0].main.temp);
-      
+      var farClass= $(".temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+      var celClass= $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
@@ -19,24 +20,8 @@ $(document).ready(function() {
       $("i").addClass("owf owf-"+cond+" owf-5x");
      
      $("#tempChange").click(function(){
-              /*("#temperature").toggle(function(){
-
-                $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
-                $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
-              });*/
-            var Fartempdisplay=true;
-            var Celtempdisplay;
-            //Fartempdisplay.show()
-            if(Fartempdisplay){
               $("#temperature").empty();
-              $("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
-              Celtempdisplay=true;
-
-            }else if(Celtempdisplay==true){
-              $("#temperature").empty();
-              $("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
-              Celtempdisplay=false;
-            }
+             $("#temperature").toggleClass(farClass,celClass);
 
      })
       //$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
