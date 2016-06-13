@@ -13,9 +13,9 @@ $(document).ready(function() {
      
       var weatherDes=response.list[0].weather[0].description;
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
-      var Celtemp=response.list[0].main.temp-273.15;
+      var Celtemp=Math.round(response.list[0].main.temp-273.15);
       var cond =response.cod;
-      $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+      $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+" Fahrenheit</h1>");
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
