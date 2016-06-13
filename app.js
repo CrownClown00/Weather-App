@@ -15,7 +15,7 @@ $(document).ready(function() {
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var Celtemp=Math.round(response.list[0].main.temp-273.15);
       var cond =response.cod;
-      $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+" Fahrenheit</h1>");
+      $(".Fartemperature").append("<h1>Temperature: "+Fartemp+"&deg Fahrenheit</h1>");
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
@@ -23,8 +23,8 @@ $(document).ready(function() {
      $("#tempChange").click(function(){
         $("#temperature").empty();
         $("#temperature").toggleClass("Fartemperature Celtemperature"); 
-        $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+" Fahrenheit</h1>");
-       $(".Celtemperature").append("<h1>Today's Weather: "+Celtemp+" Celcius</h1>");
+        $(".Fartemperature").append("<h1>Temperature: "+Fartemp+"&deg Fahrenheit</h1>");
+       $(".Celtemperature").append("<h1>Temperature: "+Celtemp+"&deg Celcius</h1>");
          
 
      })
