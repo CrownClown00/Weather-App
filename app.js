@@ -27,7 +27,7 @@ $(document).ready(function() {
             var Fartempdisplay=$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
             var Celtempdisplay =$("#temperature").append("<h1>Today's Weather:  blah blah</h1>");
             Fartempdisplay.show()
-            if(Fartempdisplay.show()=true){
+            if(Fartempdisplay){
               $("#temperature").empty();
               Celtempdisplay.show();
 
