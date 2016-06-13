@@ -24,7 +24,7 @@ $(document).ready(function() {
                 $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
                 $(this).append("<h1>Today's Weather: "+Fartemp+"</h1>")
               });*/
-            var Fartempdisplay=true;
+            var Fartempdisplay;
             //var Celtempdisplay="";
             //Fartempdisplay.show()
             if(Fartempdisplay=true){
