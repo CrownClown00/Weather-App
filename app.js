@@ -22,7 +22,7 @@ $(document).ready(function() {
      
      $("#tempChange").click(function(){
               
-         $("#temperature").toggleClass(".Fartemperature"); 
+         $("#temperature").addClass("Celtemperature"); 
 
      })
       //$("#temperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
