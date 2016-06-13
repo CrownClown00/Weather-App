@@ -15,13 +15,15 @@ $(document).ready(function() {
       var Fartemp=Math.round((response.list[0].main.temp-273.15)*1.8+32);
       var cond =response.cod;
       $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
-       $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
       console.log("owf owf-"+cond);
       $("#Weatherinfo").append("<h1>Today's Weather: "+weatherDes+"</h1>");
       $("i").addClass("owf owf-"+cond+" owf-5x");
-     $("#Weatherinfo").addClass("Celtemperature"); 
+    
      $("#tempChange").click(function(){
+       
         $("#temperature").toggleClass("Fartemperature Celtemperature"); 
+        $(".Fartemperature").append("<h1>Today's Weather: "+Fartemp+"</h1>");
+       $(".Celtemperature").append("<h1>Today's Weather: test</h1>");
          
 
      })
